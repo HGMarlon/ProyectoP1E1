@@ -1,13 +1,16 @@
+#include <string>
 #ifndef PERSONA_H
 #define PERSONA_H
 
+using namespace std;
 
 class persona
 {
     public:
         persona();
         void menu();
-		void insert();
+		void insertA();
+		void display();
     protected:
 
     private:

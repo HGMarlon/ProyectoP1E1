@@ -10,11 +10,6 @@ persona::persona()
     //ctor
 }
 
-persona::~persona()
-{
-    //dtor
-}
-
 void persona::menu()
 {
     int choice;
@@ -44,7 +39,7 @@ void persona::menu()
     case 1:
     	do
     	{
-    		insert();
+    		insertA();
     		cout<<"\n\t\t\t Agrega otra persona(Y,N): ";
     		cin>>x;
 		}while(x=='y'||x=='Y');
@@ -53,13 +48,13 @@ void persona::menu()
 		display();
 		break;
 	case 3:
-		modify();
+		//modify();
 		break;
 	case 4:
-		search();
+		//searchA();
 		break;
 	case 5:
-		delet();
+		//delet();
 		break;
 	case 6:
 		exit(0);
@@ -69,7 +64,7 @@ void persona::menu()
 	getch();
     }while(choice!= 6);
 }
-void persona::insert()
+void persona::insertA()
 {
 	system("cls");
 	fstream file;
@@ -87,5 +82,37 @@ void persona::insert()
 	cin>>address;
 	file.open("ParticipantRecord.txt", ios::app | ios::out);
 	file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< phone <<std::left<<std::setw(15)<< college <<std::left<<std::setw(15)<< address << "\n";
+	file.close();
+}
+void persona::display()
+{
+	system("cls");
+	fstream file;
+	int total=0;
+	cout<<"\n-------------------------Tabla de Detalles de Personas -------------------------"<<endl;
+	file.open("ParticipantRecord.txt",ios::in);
+	if(!file)
+	{
+		cout<<"\n\t\t\tNo hay información...";
+		file.close();
+	}
+	else
+	{
+		file >> id >> name >> phone >> college >> address;
+		while(!file.eof())
+		{
+			total++;
+			cout<<"\n\n\t\t\t Id Persona: "<<id<<endl;
+			cout<<"\t\t\t Nombre Persona: "<<name<<endl;
+			cout<<"\t\t\t Telefono Persona: "<<phone<<endl;
+			cout<<"\t\t\t Universidad Persona: "<<college<<endl;
+			cout<<"\t\t\t Direccion Persona: "<<address<<endl;
+			file >> id >> name >> phone >> college >> address;
+		}
+		if(total==0)
+		{
+			cout<<"\n\t\t\tNo hay informacion...";
+		}
+	}
 	file.close();
 }

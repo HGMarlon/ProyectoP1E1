@@ -13,3 +13,24 @@
 1647626419 source:c:\users\my computer\proyectos\proyectop1e1\proyectop1e1\crud\primerproyecto\src\persona.cpp
 	"persona.h"
 
+1647629538 source:c:\users\user\onedrive\documentos\mariano\proyectosprograi\proyectop1e1\crud\primerproyecto\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"persona.h"
+
+1647630964 c:\users\user\onedrive\documentos\mariano\proyectosprograi\proyectop1e1\crud\primerproyecto\persona.h
+	<string>
+
+1647629538 source:c:\users\user\onedrive\documentos\mariano\proyectosprograi\proyectop1e1\crud\primerproyecto\src\persona.cpp
+	"persona.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
